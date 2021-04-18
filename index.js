@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('path');
+
 
 const generateREADME = (answers) =>
   ` # Title
@@ -17,78 +19,84 @@ ${answers.Installation}
 ## Usage:
 ${answers.Usage}
 ## License
-${answers.License}
+[![badge:${answers.License}](https://img.shields.io/badge/license-${answers.License}-brightgreen)](https://opensource.org/licenses/${answers.License})
 ## How to Contribute
 ${answers.Contribute}
 ## Tests
 ${answers.Tests}
 ## Questions
 ${answers.Questions}
+## GitHub User name 
+${answers.usernName}
+### Link to GitHub:
+https://github.com/killjoyangel
+### Email address 
+${answers.address}
+# Demo
+![Demo of README](./assets/image/README.gif)
   `;
 
 
 inquirer
-  .prompt([
+.prompt([
     {
         type: 'input',
-        name: 'userName',
+        name: 'username',
         message: 'GitHub username?',
-          },
+    },
     {
         type: 'input',
-           name: 'address',
+        name: 'address',
         message: 'What is you email address?',
-   
     }, 
-
     {
         type: 'input',
         name: 'Title',
         message: 'What is the title of your project?',
-      },
+    },
     {
         type: 'input',
         name: 'description',
         message:'Briefly describe your project',
-      },
-      {
+    },
+    {
         type: 'input',
         name: 'Installation',
         message: 'What dependencies need to be installed?',
     },
-      {
+    {
         type: 'input',
         name: 'Usage',
         message: 'How do you use your application?',
-      },
-
-    {type: 'list',
-      name: 'license',
-      message: 'What license does your project use?',
-      choices: [
-              'MIT',
-              'Apache2.0',
-              'GPL3.0',
-              'BSD3',
-              'None',
-      ]  
     },
 
-      {
+    {type: 'list',
+    name: 'License',
+    message: 'What license does your project use?',
+    choices: [
+        'MIT',
+        'Apache2.0',
+        'GPL3.0',
+        'BSD3',
+        'None',
+    ]  
+    },
+    {
         type: 'input',
         name: 'Contribute',
         message: 'How can contributions be added?',
-      },
-      {
+    },
+    {
         type: 'input',
         name: 'Tests',
         message: 'What command should a user run to test this application?',
-      },
+    },
 ])
 .then((answers) => {
     const READMEPageContent = generateREADME(answers);
 
-    fs.writeFile('README.md', READMEPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created README.md!')
+   // fs.writeFile('READMEexample.md', READMEPageContent, <-- how to make it generate a new file
+        fs.writeFile('README.md', READMEPageContent, (err) =>
+    err ? console.log(err) : console.log('Successfully created README.md!')
     );
-  });
+});
