@@ -30,3 +30,25 @@ node index.js
 
 <br>
 <br>
+
+### Screenshot of Terminal
+![screenshot](assets/images/terminal.JPG)
+
+### Demo of Readme
+![Demo Gif](assets/images/README.gif)
+
+<br>
+<br>
+<br>
+<br>
+
+## Screenshot of Final sampleREADME
+
+![screenshot](assets/images/final.jpg)
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+
