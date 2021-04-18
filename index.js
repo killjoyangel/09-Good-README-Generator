@@ -34,7 +34,7 @@ https://github.com/killjoyangel
 ### Email address 
 ${answers.address}
 # Demo
-![Demo of README](./assets/image/README.gif)`;
+![Demo of README](assets\images\README.gif)`;
 
 // inquier prompt goes here with questions
 inquirer
