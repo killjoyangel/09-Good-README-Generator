@@ -10,3 +10,23 @@ I created a demo that you can view on this link:
 
 <br>
 <br>
+
+
+## Technologies used:
+
+* Java Script
+* Iqurer
+
+
+The application will be invoked by using the following command:
+```bash
+node index.js
+```
+<br>
+<br>
+
+### Original Java Script  Code
+![screenshot](assets/images/code.jpg)
+
+<br>
+<br>
