@@ -5,6 +5,7 @@ const path = require('path');
 
 
 const generateREADME = (answers) =>
+//read me skeleton goes here
   ` # Title
   ${answers.Title}
 ## Description
@@ -33,10 +34,9 @@ https://github.com/killjoyangel
 ### Email address 
 ${answers.address}
 # Demo
-![Demo of README](./assets/image/README.gif)
-  `;
+![Demo of README](./assets/image/README.gif)`;
 
-
+// inquier prompt goes here with questions
 inquirer
 .prompt([
     {
@@ -69,7 +69,6 @@ inquirer
         name: 'Usage',
         message: 'How do you use your application?',
     },
-
     {type: 'list',
     name: 'License',
     message: 'What license does your project use?',
@@ -92,11 +91,13 @@ inquirer
         message: 'What command should a user run to test this application?',
     },
 ])
+
+//file path to print read me
 .then((answers) => {
     const READMEPageContent = generateREADME(answers);
-
-   // fs.writeFile('READMEexample.md', READMEPageContent, <-- how to make it generate a new file
-        fs.writeFile('README.md', READMEPageContent, (err) =>
+    fs.writeFile('README.md', READMEPageContent, (err) =>
     err ? console.log(err) : console.log('Successfully created README.md!')
     );
 });
+
+   // fs.writeFile('READMEexample.md', READMEPageContent, <-- how to make it generate a new file
