@@ -26,4 +26,4 @@ https://github.com/killjoyangel
 ### Email address 
 killjoydesigner@gmail.com
 # Demo
-![Demo of README](assetsimagesREADME.gif)
+![Demo of README](assets/images/README.gif)
