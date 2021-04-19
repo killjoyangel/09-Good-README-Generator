@@ -27,8 +27,8 @@ ${answers.Contribute}
 ${answers.Tests}
 ## Questions
 ${answers.Questions}
-## GitHub User name 
-${answers.usernName}
+## GitHub Username 
+${answers.Username}
 ### Link to GitHub:
 https://github.com/killjoyangel
 ### Email address 
@@ -41,7 +41,7 @@ inquirer
 .prompt([
     {
         type: 'input',
-        name: 'username',
+        name: 'Username',
         message: 'GitHub username?',
     },
     {
@@ -56,7 +56,7 @@ inquirer
     },
     {
         type: 'input',
-        name: 'description',
+        name: 'Description',
         message:'Briefly describe your project',
     },
     {
@@ -95,7 +95,7 @@ inquirer
 //file path to print read me
 .then((answers) => {
     const READMEPageContent = generateREADME(answers);
-    fs.writeFile('README.md', READMEPageContent, (err) =>
+    fs.writeFile('sampleREADME.md', READMEPageContent, (err) =>
     err ? console.log(err) : console.log('Successfully created README.md!')
     );
 });
